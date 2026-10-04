@@ -27,7 +27,7 @@
       <a href="#speaking">Speaking</a>
       <a href="#startups">Startups</a>
       <a href="#about">About Me</a>
-      <a class="btn btn--filled btn--sm" href="#invite">Invite David to Speak at Your Event</a>
+      <a class="btn btn--filled btn--sm" href="#invite">Let's Talk</a>
     </nav>
   </div>
 </header>
@@ -248,8 +248,7 @@
     <div class="speaking-head">
       <div class="section-head">
         <h2 class="section-title">Speaking</h2>
-        <p class="lede">I speak all over the world at conferences, on campuses, to associations, and with leadership teams about generative AI, open education, and the future of higher education. I've given invited testimony to the US Secretary of Education's Commission on the Future of Higher Education and presented an invited whitepaper on the sustainability of open education for the Organisation for Economic Cooperation and Development (OECD). And I'm one of the founders of the <a href="https://en.wikipedia.org/wiki/Open_educational_resources">open education</a> movement.</p> 
-        <p>I'd love to work with your group to challenge, inform, and inspire you to more faithfully live your values and more fully accomplish your mission.</p>
+        <p class="lede">I speak all over the world at conferences, on campuses, to associations, and with leadership teams about generative AI, open education, and the future of higher education, and I provide consulting services on these same topics. From working with a small group of community college leaders to presenting invited testimony to the US Secretary of Education's Commission on the Future of Higher Education, I've probably spoken to or worked with a group like yours. 
       </div>
     </div>
 
@@ -455,9 +454,9 @@
 
     <div class="cta-panel cta-panel--form" id="invite">
       <div class="cta-intro">
-        <span class="cta-title">Planning an event?</span>
-        <p>Tell me a little about it and I'll get back to you within a few days.</p>
-        <p>Prefer to write directly? Email me at <a href="mailto:speaking@davidwiley.org">speaking@davidwiley.org</a> or call <span class="nowrap">(801) 709-1028</span>.</p>
+        <span class="cta-title">Let's Talk</span>
+        <p>I'd love to work with your group to challenge, inform, and inspire you to more faithfully live your values and more fully accomplish your mission. Share a few details about your group and your goals, and I'll follow up to discuss how we might work together.</p>
+        <p>Prefer email? Write to me at <a href="mailto:speaking@davidwiley.org">speaking@davidwiley.org</a>.</p>
       </div>
       <form class="invite-form" action="https://usebasin.com/f/f226c5e87099" method="POST">
         <div class="field">
@@ -473,7 +472,7 @@
           <input id="inv-org" name="organization" type="text" autocomplete="organization" required>
         </div>
         <div class="field">
-          <label for="inv-date">Event date <span class="hint">(approximate is fine)</span></label>
+          <label for="inv-date">Date <span class="hint">(approximate is fine)</span></label>
           <input id="inv-date" name="event_date" type="text">
         </div>
         <div class="field">
@@ -493,7 +492,7 @@
           <input id="inv-audience" name="audience" type="text">
         </div>
         <div class="field field--wide">
-          <label for="inv-message">Tell me about your event</label>
+          <label for="inv-message">Tell me about your group</label>
           <textarea id="inv-message" name="message" rows="5" required></textarea>
         </div>
         <div class="hp" aria-hidden="true">
@@ -501,7 +500,7 @@
           <input id="inv-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
         </div>
         <div class="field--wide form-actions">
-          <button class="btn btn--filled" type="submit">Invite David to Speak at Your Event</button>
+          <button class="btn btn--filled" type="submit">Send</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </div>
       </form>
@@ -654,7 +653,7 @@
       .then(function () {
         form.reset();
         status.className = 'form-status is-ok';
-        status.textContent = "Thanks! Your invitation is on its way, and I'll be in touch soon.";
+        status.textContent = "Thank you! Your information has been sent and I'll be in touch soon.";
       })
       .catch(function () {
         status.className = 'form-status is-error';
