@@ -293,6 +293,37 @@ ul { margin: 0; padding: 0; }
 .cta-panel p { font-size: 20px; color: var(--ink-2); }
 .cta-panel p a { color: var(--on-container); font-weight: 600; }
 
+/* Speaking invitation form */
+.cta-panel--form { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); align-items: start; gap: 48px; padding: 44px; }
+.cta-intro { display: flex; flex-direction: column; gap: 16px; }
+.cta-intro p { margin: 0; }
+.nowrap { white-space: nowrap; }
+.invite-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; padding: 32px; border-radius: var(--radius-md); background: var(--surface); }
+.invite-form .field { display: flex; flex-direction: column; gap: 6px; }
+.invite-form .field--wide { grid-column: 1 / -1; }
+.invite-form label { font-size: 16px; font-weight: 600; color: var(--ink); }
+.invite-form .hint { font-weight: 400; color: var(--ink-3); }
+.invite-form input, .invite-form select, .invite-form textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid var(--outline);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 17px;
+}
+.invite-form textarea { resize: vertical; line-height: 1.5; }
+.invite-form input:focus, .invite-form select:focus, .invite-form textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: var(--accent); }
+.invite-form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.invite-form .form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.invite-form button { border: 0; cursor: pointer; font-family: inherit; }
+.invite-form button:disabled { opacity: 0.6; cursor: wait; }
+.form-status { margin: 0; font-size: 17px; color: var(--ink-2); }
+.form-status.is-ok { color: var(--green); font-weight: 600; }
+.form-status.is-error { color: var(--red); }
+
 /* ---------- Projects ---------- */
 .projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .project {
@@ -381,6 +412,7 @@ ul { margin: 0; padding: 0; }
   .stats { grid-auto-flow: row; grid-auto-columns: auto; }
   .stats, .projects-grid, .startups-grid { grid-template-columns: 1fr; }
   .cta-panel { flex-direction: column; align-items: flex-start; padding: 28px; }
+  .cta-panel--form { grid-template-columns: 1fr; gap: 28px; }
   .press { padding: 32px 24px; }
   .press img { height: 32px; }
   .course-logo { width: 140px; }
@@ -391,4 +423,7 @@ ul { margin: 0; padding: 0; }
   .wordmark span:first-child { font-size: 24px; }
   .stat .number { font-size: 44px; }
   .footer-bottom { flex-direction: column; gap: 8px; }
+  .cta-panel--form { padding: 20px; }
+  .invite-form { grid-template-columns: 1fr; padding: 20px; }
+  .invite-form .btn { width: 100%; justify-content: center; white-space: normal; text-align: center; }
 }

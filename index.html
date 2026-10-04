@@ -27,7 +27,7 @@
       <a href="#speaking">Speaking</a>
       <a href="#startups">Startups</a>
       <a href="#about">About Me</a>
-      <a class="btn btn--filled btn--sm" href="#speaking">Invite David to Speak at Your Event</a>
+      <a class="btn btn--filled btn--sm" href="#invite">Invite David to Speak at Your Event</a>
     </nav>
   </div>
 </header>
@@ -453,12 +453,58 @@
       </div>
     </div>
 
-    <div class="cta-panel">
-      <div>
+    <div class="cta-panel cta-panel--form" id="invite">
+      <div class="cta-intro">
         <span class="cta-title">Planning an event?</span>
-        <p>Email me at <a href="mailto:speaking@davidwiley.org">speaking@davidwiley.org</a> or (801) 709-1028.</p>
+        <p>Tell me a little about it and I'll get back to you within a few days.</p>
+        <p>Prefer to write directly? Email me at <a href="mailto:speaking@davidwiley.org">speaking@davidwiley.org</a> or call <span class="nowrap">(801) 709-1028</span>.</p>
       </div>
-      <a class="btn btn--filled" href="mailto:speaking@davidwiley.org">Invite David to Speak at Your Event</a>
+      <form class="invite-form" action="https://usebasin.com/f/f226c5e87099" method="POST">
+        <div class="field">
+          <label for="inv-name">Name</label>
+          <input id="inv-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="inv-email">Email</label>
+          <input id="inv-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="inv-org">Organization</label>
+          <input id="inv-org" name="organization" type="text" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label for="inv-date">Event date <span class="hint">(approximate is fine)</span></label>
+          <input id="inv-date" name="event_date" type="text">
+        </div>
+        <div class="field">
+          <label for="inv-format">Format</label>
+          <select id="inv-format" name="format">
+            <option>In person</option>
+            <option>Virtual</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="inv-location">Location</label>
+          <input id="inv-location" name="location" type="text" placeholder="City or venue">
+        </div>
+        <div class="field field--wide">
+          <label for="inv-audience">Audience <span class="hint">(who and roughly how many)</span></label>
+          <input id="inv-audience" name="audience" type="text">
+        </div>
+        <div class="field field--wide">
+          <label for="inv-message">Tell me about your event</label>
+          <textarea id="inv-message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label for="inv-gotcha">Leave this empty</label>
+          <input id="inv-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="field--wide form-actions">
+          <button class="btn btn--filled" type="submit">Invite David to Speak at Your Event</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -592,6 +638,30 @@
     a.addEventListener('click', function () { set(false); });
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+})();
+
+(function () {
+  var form = document.querySelector('.invite-form');
+  var status = form.querySelector('.form-status');
+  var btn = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    btn.disabled = true;
+    status.className = 'form-status';
+    status.textContent = 'Sending…';
+    fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); })
+      .then(function () {
+        form.reset();
+        status.className = 'form-status is-ok';
+        status.textContent = "Thanks! Your invitation is on its way, and I'll be in touch soon.";
+      })
+      .catch(function () {
+        status.className = 'form-status is-error';
+        status.innerHTML = 'Sorry, that didn’t go through. Please email <a href="mailto:speaking@davidwiley.org">speaking@davidwiley.org</a> instead.';
+      })
+      .then(function () { btn.disabled = false; });
+  });
 })();
 </script>
 
