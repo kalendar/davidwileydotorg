@@ -18,7 +18,10 @@
 <header class="site-header">
   <div class="container">
     <a class="wordmark" href="#home"><span>David Wiley</span><span>PhD</span></a>
-    <nav class="site-nav" aria-label="Sections">
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="bars" d="M4 7h16M4 12h16M4 17h16"/><path class="x" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Sections">
       <a href="#research">Research</a>
       <a href="#teaching">Teaching</a>
       <a href="#speaking">Speaking</a>
@@ -562,7 +565,7 @@
     <div class="footer-top">
       <div>
         <span class="footer-name">David Wiley, PhD</span>
-        <p>You can reach me at <a href="mailto:david.wiley@gmail.com">david@davidwiley.org</a>.</p>
+        <p>You can reach me at <a href="mailto:david@davidwiley.org">david@davidwiley.org</a>.</p>
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <a href="#research">Research</a>
@@ -575,6 +578,22 @@
     <div class="footer-bottom"><span>&copy; 2026 David Wiley and licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</span><span>davidwiley.org</span></div>
   </div>
 </footer>
+
+<script>
+(function () {
+  var header = document.querySelector('.site-header');
+  var btn = header.querySelector('.nav-toggle');
+  function set(open) {
+    header.classList.toggle('nav-open', open);
+    btn.setAttribute('aria-expanded', open);
+  }
+  btn.addEventListener('click', function () { set(!header.classList.contains('nav-open')); });
+  header.querySelectorAll('.site-nav a').forEach(function (a) {
+    a.addEventListener('click', function () { set(false); });
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+})();
+</script>
 
 </body>
 </html>
