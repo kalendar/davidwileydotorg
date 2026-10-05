@@ -662,6 +662,7 @@
       .then(function () {
         form.reset();
         status.className = 'form-status is-ok';
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'speaking_invite' });
         status.textContent = "Thank you! Your information has been sent and I'll be in touch soon.";
       })
       .catch(function () {
