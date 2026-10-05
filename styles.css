@@ -423,6 +423,9 @@ ul { margin: 0; padding: 0; }
   .stat .number { font-size: 44px; }
   .footer-bottom { flex-direction: column; gap: 8px; }
   .cta-panel--form { padding: 20px; }
+  .course-group { grid-template-columns: minmax(0, 1fr); }
+  .course-group ul { grid-row: 3; }
+  .course-logo { grid-column: 1; grid-row: 2; justify-self: start; margin: 4px 0 6px; }
   .invite-form { grid-template-columns: 1fr; padding: 20px; }
   .invite-form .btn { width: 100%; justify-content: center; white-space: normal; text-align: center; }
 }
