@@ -320,7 +320,7 @@ ul { margin: 0; padding: 0; }
 .invite-form button { border: 0; cursor: pointer; font-family: inherit; }
 .invite-form button:disabled { opacity: 0.6; cursor: wait; }
 .form-status { margin: 0; font-size: 17px; color: var(--ink-2); }
-.form-status.is-ok { color: var(--green); font-weight: 600; }
+.form-status.is-ok { color: var(--primary); font-weight: 600; }
 .form-status.is-error { color: var(--red); }
 
 /* ---------- Projects ---------- */
