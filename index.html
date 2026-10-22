@@ -35,7 +35,7 @@
       <a href="#research">Research</a>
       <a href="#teaching">Teaching</a>
       <a href="#speaking">Speaking</a>
-      <a href="#startups">Startups</a>
+      <a href="#workshops">Workshops</a>
       <a href="#about">About Me</a>
       <a class="btn btn--filled btn--sm" href="#invite">Invite David to Speak</a>
     </nav>
@@ -56,7 +56,7 @@
       <p class="intro">I'm <strong>Chief Academic AI Officer</strong> and <strong>Professor of Curriculum and Instruction</strong> at Marshall University. My teaching, research, and consulting happen at the intersection of generative AI, open education, entrepreneurship, instructional design, and student success. I am deeply interested in how colleges and universities - and their students, faculty, and staff - can transform themselves in order to thrive in the age of AI. I hold a BFA in Music from Marshall University and a PhD in Instructional Psychology and Technology from Brigham Young University.</p>
 
     <div class="press" aria-label="Press coverage">
-      <div class="label">You may have seen my work covered in</div>
+      <div class="label">As covered in</div>
       <div class="logos">
         <img src="images/press/wired-white.png" alt="Wired" class="prewhite">
         <img src="images/press/mit-technology-review.png" alt="MIT Technology Review">
@@ -88,8 +88,8 @@
     </div>
 
     <div class="stats">
-      <div class="stat"><span class="number">20K+ Citations</span><span>My work has been cited more than 20,000 times.</span></div>
-      <div class="stat"><span class="number">$15M+ in Grants</span><span>I have been PI or Co-PI on over $15M in grant funding.</span></div>
+      <div class="stat"><span class="number">20K+ Citations</span></div>
+      <div class="stat"><span class="number">$15M+ in Grants</span></div>
     </div>
 
     <div class="split">
@@ -131,6 +131,13 @@
       <h3 class="sub-title sub-title--lg">Current Projects</h3>
       <div class="projects-grid">
         <article class="project">
+          <span class="chip">open source</span>
+          <h3 class="sub-title sub-title--lg">Open Textbook Draft</h3>
+          <p>This AI skill helps a domain expert author a complete, high-quality open textbook draft in a day - entirely through a structured conversation. I used this process to create my most recent open textbook, <a href="https://pressbooks.marshall.edu/mis340/">Relational Thinking: A Concepts-First Introduction to Databases for the Age of AI</a>. 
+          </p>
+          <a class="project-link" href="https://github.com/kalendar/open-textbook-draft">GitHub &#x2197;</a>
+        </article>
+        <article class="project">
           <span class="chip">Under development</span>
           <h3 class="sub-title sub-title--lg">Kaiwa</h3>
           <p>Kaiwa is a system for creating, managing, administering, grading, and providing immediate, criterion-level feedback on LLM-powered conversational assessments. Currently in testing.</p>
@@ -138,15 +145,8 @@
         </article>
         <article class="project">
           <span class="chip">Open source</span>
-          <h3 class="sub-title sub-title--lg">openstax-graph</h3>
-          <p>openstax-graph derives a typed, adversarially verified knowledge graph from an OpenStax textbook — concepts, real-world entities, the relationships between them, and an acyclic prerequisite map. Useful with open source LLMs for free on-device tutors coupled with open textbooks. </p>
-          <a class="project-link" href="https://github.com/kalendar/openstax-graph">GitHub &#x2197;</a>
-        </article>
-        <article class="project">
-          <span class="chip">open source</span>
           <h3 class="sub-title sub-title--lg">GenOER Reader</h3>
-          <p>A proof-of-concept "generative OER" web app. Every layer of the app is openly licensed and runs entirely in your browser: an OpenStax textbook, a derived knowledge graph, and an open source, in-browser LLM. Meaning there's no backend, no accounts, and no cost. An experiment in building local, free, AI-powered learning.
-          </p>
+          <p>A proof-of-concept "generative OER" web app. Every layer of the app is openly licensed and runs entirely in your browser: an OpenStax textbook, a derived knowledge graph, and an open source, in-browser LLM. Meaning there's no backend, no accounts, and no cost. An experiment in building local, free, AI-powered learning.</p>
           <a class="project-link" href="https://github.com/kalendar/genoer-reader">GitHub &#x2197;</a>
         </article>
       </div>
@@ -265,8 +265,8 @@
     </div>
 
     <div class="stats">
-      <div class="stat"><span class="number">110+ Keynotes</span><span>I've given over 110 conference keynote addresses.</span></div>
-      <div class="stat"><span class="number">20+ Countries</span><span>I've given keynote addresses in over 20 countries around the world.</span></div>
+      <div class="stat"><span class="number">110+ Keynotes</span></div>
+      <div class="stat"><span class="number">20+ Countries</span></div>
     </div>
 
     <div style="background:white;border-radius:var(--radius-xl);box-shadow:var(--shadow-2);border:1px solid var(--grey-200);overflow:hidden;">
@@ -470,7 +470,8 @@
         <p>I'd love to speak with your group to challenge, inform, and inspire you to more faithfully live your values and more fully accomplish your mission. Share a few details about your group and your goals, and I'll follow up to discuss how we might work together.</p>
         <p>Prefer email? Write to me at <a href="mailto:speaking@davidwiley.org">speaking@davidwiley.org</a>.</p>
       </div>
-      <form class="invite-form" action="https://usebasin.com/f/f226c5e87099" method="POST">
+      <form class="invite-form" action="https://usebasin.com/f/f226c5e87099" method="POST" data-fallback-email="speaking@davidwiley.org" data-ga-name="speaking_invite">
+        <input type="hidden" name="form_type" value="speaking">
         <div class="field">
           <label for="inv-name">Name</label>
           <input id="inv-name" name="name" type="text" autocomplete="name" required>
@@ -520,7 +521,107 @@
   </div>
 </section>
 
+<!-- ======================= WORKSHOPS ======================= -->
+<section id="workshops" class="section section--workshops">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">Workshops</h2>
+      <p class="lede">
+        I've delivered hundreds of high-impact workshops focused on all aspects of open education, generative AI in education, and open licensing, and how these can be paired with evidence-based practices to increase access and improve outcomes. Workshops are available in half-day, full-day, and multi-day formats, and I would love to help your group transform its approach to teaching and learning to better serve your students. My most popular workshops are listed below (reach out if you're interested in a workshop on a different topic):
+      </p>
+    </div>
+
+
+      <div class="media-block">
+      <div class="workshops-grid">
+        <article class="workshop">
+          <span class="chip">Reimagine and Redesign</span>
+          <h3 class="sub-title sub-title--lg">AI Course Transformation</h3>
+          <p>This workshop begins with a deep dive into the ways AI is changing academic disciplines, the world of work, and society at large. With this understanding as framing context, participants critically examine their course learning outcomes and make appropriate updates. These updated learning outcomes become the foundation for AI-aware assessment redesigns, including designs that leverage AI to measure learning in novel ways. Finally, participants redesign the learning activities students engage with to master course learning outcomes, again using AI to scale interactivity, feedback, and personalization.
+          </p>
+        </article>
+
+        <article class="workshop">
+          <span class="chip">Access and Affordability</span>
+          <h3 class="sub-title sub-title--lg">AI for OER Authoring and Adoption</h3>
+          <p>This workshop introduces participants to my <em>Open Textbook Draft</em> skill for AI, which uses a structured conversation format to help domain experts author a complete open textbook in about a day. Participants also learn how to use AI to create a wide range of supplemental materials like interactive exercises, simulations, AI-powered assessments, presentation slides, and in-class active learning exercises. Finally, we work through ways to use AI to revise and remix existing OER, including engaging students in AI-powered OER-enabled pedagogy activities.
+          </p>
+
+        </article>
+
+        <article class="workshop">
+          <span class="chip">Conference</span>
+          <h3 class="sub-title sub-title--lg">Creative Commons Licenses</h3>
+          <p>Having been the Education Fellow at Creative Commons and one of the original authors of the CC Certificate for Educators, I've taught thousands of people about the Creative Commons licenses. This workshop provides participants with a high-level framework for understanding the licenses, goes into detail about each of the license conditions (including critical nuance around the SA and NC conditions), covers the non-license tools (CC Zero and the Public Domain Mark), surveys which CC licenses are used most frequent in education, describes the relationship between the CC licenses and OER, and ends with an always-lively Q&A session.  
+
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="cta-panel cta-panel--form" id="request-workshop">
+      <div class="cta-intro">
+        <span class="cta-title">Request a Workshop</span>
+        <p>I'd love to work with your group on a workshop. Share a few details about your group and your goals, and I'll follow up to discuss which workshop would serve you best and how we might work together.</p>
+        <p>Prefer email? Write to me at <a href="mailto:workshops@davidwiley.org">workshops@davidwiley.org</a>.</p>
+      </div>
+      <form class="invite-form" action="https://usebasin.com/f/f226c5e87099" method="POST" data-fallback-email="workshops@davidwiley.org" data-ga-name="workshop_request">
+        <input type="hidden" name="form_type" value="workshop">
+        <div class="field">
+          <label for="ws-name">Name</label>
+          <input id="ws-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="ws-email">Email</label>
+          <input id="ws-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="ws-org">Organization</label>
+          <input id="ws-org" name="organization" type="text" autocomplete="organization" required>
+        </div>
+        <div class="field">
+          <label for="ws-date">Date <span class="hint">(approximate is fine)</span></label>
+          <input id="ws-date" name="event_date" type="date">
+        </div>
+        <div class="field">
+          <label for="ws-format">Format</label>
+          <select id="ws-format" name="format">
+            <option>In person</option>
+            <option>Virtual</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="ws-location">Location</label>
+          <input id="ws-location" name="location" type="text" placeholder="City or venue">
+        </div>
+        <div class="field field--wide">
+          <label for="ws-audience">Audience <span class="hint">(who and roughly how many)</span></label>
+          <input id="ws-audience" name="audience" type="text">
+        </div>
+        <div class="field field--wide">
+          <label for="ws-message">Tell me about your group</label>
+          <textarea id="ws-message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label for="ws-gotcha">Leave this empty</label>
+          <input id="ws-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="field--wide form-actions">
+          <button class="btn btn--filled" type="submit">Send</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
 <!-- ======================= STARTUPS ======================= -->
+
+<!--//
+
 <section id="startups" class="section section--startups">
   <div class="container">
     <div class="section-head">
@@ -558,6 +659,8 @@
     </div>
   </div>
 </section>
+
+//-->
 
 <!-- ======================= ABOUT ME ======================= -->
 <section id="about" class="section section--tinted">
@@ -628,7 +731,7 @@
         <a href="#research">Research</a>
         <a href="#teaching">Teaching</a>
         <a href="#speaking">Speaking</a>
-        <a href="#startups">Startups</a>
+        <a href="#workshops">Workshops</a>
         <a href="#about">About Me</a>
       </nav>
     </div>
@@ -651,10 +754,10 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
 })();
 
-(function () {
-  var form = document.querySelector('.invite-form');
+document.querySelectorAll('.invite-form').forEach(function (form) {
   var status = form.querySelector('.form-status');
   var btn = form.querySelector('button[type="submit"]');
+  var email = form.dataset.fallbackEmail;
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     btn.disabled = true;
@@ -665,16 +768,16 @@
       .then(function () {
         form.reset();
         status.className = 'form-status is-ok';
-        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: 'speaking_invite' });
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', { form_name: form.dataset.gaName });
         status.textContent = "Thank you! Your information has been sent and I'll be in touch soon.";
       })
       .catch(function () {
         status.className = 'form-status is-error';
-        status.innerHTML = 'Sorry, that didn’t go through. Please email <a href="mailto:speaking@davidwiley.org">speaking@davidwiley.org</a> instead.';
+        status.innerHTML = 'Sorry, that didn’t go through. Please email <a href="mailto:' + email + '">' + email + '</a> instead.';
       })
       .then(function () { btn.disabled = false; });
   });
-})();
+});
 </script>
 
 </body>

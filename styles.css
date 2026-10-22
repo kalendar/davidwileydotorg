@@ -220,6 +220,7 @@ ul { margin: 0; padding: 0; }
 .section--teaching { --accent: var(--green); --container: var(--green-container); --tint: var(--green-tint); --on-container: var(--on-green); }
 .section--speaking { --accent: var(--red);   --container: var(--red-container);   --tint: var(--red-tint);   --on-container: var(--on-red); }
 .section--startups { --accent: var(--blue);  --container: var(--blue-container);  --tint: var(--blue-tint);  --on-container: var(--on-blue); }
+.section--workshops { --accent: var(--blue);  --container: var(--blue-container);  --tint: var(--blue-tint);  --on-container: var(--on-blue); }
 
 .split { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; row-gap: 48px; align-items: start; }
 .split .col { display: flex; flex-direction: column; gap: 12px; }
@@ -339,9 +340,9 @@ ul { margin: 0; padding: 0; }
 .project p { flex-grow: 1; color: var(--ink-2); }
 .project .project-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--accent); }
 
-/* ---------- Startups ---------- */
-.startups-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.startup {
+/* ---------- Startups & Workshops ---------- */
+.startups-grid, .workshops-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.startup, .workshop {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -351,8 +352,8 @@ ul { margin: 0; padding: 0; }
   border: 1px solid var(--rule);
   min-height: 340px;
 }
-.startup h3 { font-size: 34px; line-height: 1.1; }
-.startup p { flex-grow: 1; color: var(--ink-2); }
+.startup h3, .workshop h3 { font-size: 34px; line-height: 1.1; }
+.startup p, .workshop p { flex-grow: 1; color: var(--ink-2); }
 .startup .startup-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--accent); }
 
 /* ---------- About ---------- */
@@ -409,7 +410,7 @@ ul { margin: 0; padding: 0; }
   .research-pubs, .research-grants, .courses, .oer-col,
   .media-block .video, .media-block .link-list { grid-column: 1 / -1 !important; }
   .stats { grid-auto-flow: row; grid-auto-columns: auto; }
-  .stats, .projects-grid, .startups-grid { grid-template-columns: 1fr; }
+  .stats, .projects-grid, .startups-grid, .workshops-grid { grid-template-columns: 1fr; }
   .cta-panel { flex-direction: column; align-items: flex-start; padding: 28px; }
   .cta-panel--form { grid-template-columns: 1fr; gap: 28px; }
   .press { padding: 32px 24px; }
