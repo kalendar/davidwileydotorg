@@ -206,6 +206,7 @@ ul { margin: 0; padding: 0; }
 .home .eyebrow { margin-bottom: 24px; }
 .home h1 { margin-bottom: 32px; font-size: clamp(48px, 6vw, 84px); line-height: 1.02; letter-spacing: -0.02em; }
 .home h1 span { color: var(--primary); }
+.home .bio h3 { margin-bottom: 28px; }
 .home .intro { margin-bottom: 24px; font-size: 20px; color: var(--ink-2); }
 .home .bio p:not(.intro) { margin-bottom: 22px; font-size: 20px; line-height: 1.65; color: var(--ink-2); }
 .home .actions { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 10px; }
@@ -215,6 +216,7 @@ ul { margin: 0; padding: 0; }
 .section > .container { display: flex; flex-direction: column; gap: 56px; }
 .section { background: var(--surface); }
 .section--tinted { background: var(--surface-alt); }
+#speaking { padding-top: calc(var(--section-pad) / 2); }
 
 .section--research { --accent: var(--blue);  --container: var(--blue-container);  --tint: var(--blue-tint);  --on-container: var(--on-blue); }
 .section--teaching { --accent: var(--green); --container: var(--green-container); --tint: var(--green-tint); --on-container: var(--on-green); }
@@ -275,6 +277,7 @@ ul { margin: 0; padding: 0; }
 /* ---------- Speaking ---------- */
 .speaking-head { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 24px; row-gap: 32px; align-items: end; }
 .speaking-head .section-head { grid-column: 1 / -1; }
+.map-caption { position: absolute; right: 24px; bottom: 20px; max-width: calc(100% - 48px); margin: 0; font-size: clamp(28px, 4.6vw, 60px); line-height: 1.05; letter-spacing: -0.02em; text-align: right; color: var(--navy); }
 .section--speaking .stats { --container: var(--blue-container); --on-container: var(--on-blue); } /* blue like the Research stat boxes */
 .media-block { display: flex; flex-direction: column; gap: 24px; }
 .media-block .split { row-gap: 32px; }
@@ -422,6 +425,7 @@ ul { margin: 0; padding: 0; }
 @media (max-width: 560px) {
   .wordmark span:first-child { font-size: 24px; }
   .stat .number { font-size: 44px; }
+  .map-caption { right: 12px; bottom: 10px; max-width: calc(100% - 24px); }
   .footer-bottom { flex-direction: column; gap: 8px; }
   .cta-panel--form { padding: 20px; }
   .course-group { grid-template-columns: minmax(0, 1fr); }
